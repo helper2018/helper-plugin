@@ -24,6 +24,9 @@
 
 ### application 层增加了对应于service的controller，以及相关的数据传输对象
 ![](image/app.png)
+
+### 接口文档
+![](image/swagger-doc.png)
 ---
 
 # IntelliJ IDEA *File and Code Templates* 配置建议
