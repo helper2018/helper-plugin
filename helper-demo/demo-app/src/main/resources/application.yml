@@ -1,0 +1,45 @@
+---
+spring:
+  application:
+    name: demo-app
+  profiles:
+    active: dev
+...
+
+---
+#日志logging.
+logging:
+  config: classpath:logback-spring.xml
+  level:
+    org.springframework.cloud.sleuth: info
+...
+
+---
+#从pom.xml中获取
+info:
+  app:
+    name: "@project.name@"
+    description: "@project.description@"
+    version: "@project.version@"
+    spring-boot-version: "@project.parent.version@"
+...
+
+---
+#mybatis映射表扫描路径
+mybatis:
+  typeAliasesPackage: org.helper.demo.service.module
+  configuration:
+    mapUnderscoreToCamelCase: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath*:mapper/**/*.xml
+...
+
+---
+#swagger-api
+swagger-api:
+  root: http://127.0.0.1:${server.port}/
+  desc: "@project.description@"
+  enable: false
+  version: "@project.version@"
+  basePackage: "org.helper.demo.app"
+...

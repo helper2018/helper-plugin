@@ -1,0 +1,113 @@
+2021-10-26 22:53:37.821 demo-app [main] INFO  org.helper.demo.app.AppApplication - Starting AppApplication using Java 1.8.0_181 on freedom.local with PID 21504 (/Users/zyw/code/github/helper/helper-demo/demo-app/target/classes started by zyw in /Users/zyw/code/github/helper)
+2021-10-26 22:53:37.825 demo-app [main] INFO  org.helper.demo.app.AppApplication - The following profiles are active: dev
+2021-10-26 22:53:39.685 demo-app [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 10010 (http)
+2021-10-26 22:53:39.696 demo-app [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-10010"]
+2021-10-26 22:53:39.696 demo-app [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-10-26 22:53:39.697 demo-app [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-10-26 22:53:39.771 demo-app [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-10-26 22:53:39.771 demo-app [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1834 ms
+2021-10-26 22:53:39.955 demo-app [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2021-10-26 22:53:50.566 demo-app [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2021-10-26 22:53:51.326 demo-app [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-10010"]
+2021-10-26 22:53:51.353 demo-app [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 10010 (http) with context path ''
+2021-10-26 22:53:51.679 demo-app [main] INFO  org.helper.demo.app.AppApplication - Started AppApplication in 14.804 seconds (JVM running for 15.757)
+2021-10-26 22:53:51.683 demo-app [main] INFO  org.helper.demo.app.AppApplication - 
+--------------------------------------------------------
+	Application 'demo-app' is running! Access URLS: 
+	 API DOC: 	http://127.0.0.1:10010/swagger-ui/index.html
+	Local:   	http://localhost:10010
+	External:	http://127.0.0.1:10010
+--------------------------------------------------------
+2021-10-26 22:53:55.491 demo-app [http-nio-10010-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-10-26 22:53:55.491 demo-app [http-nio-10010-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-10-26 22:53:55.500 demo-app [http-nio-10010-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 7 ms
+2021-10-26 23:18:59.399 demo-app [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2021-10-26 23:18:59.425 demo-app [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2021-10-26 23:19:12.473 demo-app [main] INFO  org.helper.demo.app.AppApplication - Starting AppApplication using Java 1.8.0_181 on freedom.local with PID 22169 (/Users/zyw/code/github/helper/helper-demo/demo-app/target/classes started by zyw in /Users/zyw/code/github/helper)
+2021-10-26 23:19:12.482 demo-app [main] INFO  org.helper.demo.app.AppApplication - The following profiles are active: dev
+2021-10-26 23:19:14.280 demo-app [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 10010 (http)
+2021-10-26 23:19:14.289 demo-app [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-10010"]
+2021-10-26 23:19:14.290 demo-app [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-10-26 23:19:14.290 demo-app [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-10-26 23:19:14.352 demo-app [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-10-26 23:19:14.353 demo-app [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1749 ms
+2021-10-26 23:19:14.484 demo-app [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2021-10-26 23:19:28.038 demo-app [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2021-10-26 23:19:28.801 demo-app [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-10010"]
+2021-10-26 23:19:28.827 demo-app [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 10010 (http) with context path ''
+2021-10-26 23:19:29.253 demo-app [main] INFO  org.helper.demo.app.AppApplication - Started AppApplication in 17.56 seconds (JVM running for 18.665)
+2021-10-26 23:19:29.257 demo-app [main] INFO  org.helper.demo.app.AppApplication - 
+--------------------------------------------------------
+	Application 'demo-app' is running! Access URLS: 
+	 API DOC: 	http://127.0.0.1:10010/swagger-ui/index.html
+	Local:   	http://localhost:10010
+	External:	http://127.0.0.1:10010
+--------------------------------------------------------
+2021-10-26 23:19:34.089 demo-app [http-nio-10010-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-10-26 23:19:34.089 demo-app [http-nio-10010-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-10-26 23:19:34.092 demo-app [http-nio-10010-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2021-10-26 23:20:00.286 demo-app [http-nio-10010-exec-5] WARN  o.s.w.s.m.support.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `long` from String "1L": not a valid `long` value; nested exception is com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot deserialize value of type `long` from String "1L": not a valid `long` value
+ at [Source: (PushbackInputStream); line: 1, column: 7] (through reference chain: org.helper.base.common.req.IdReqDTO["id"])]
+2021-10-26 23:21:01.250 demo-app [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2021-10-26 23:21:01.259 demo-app [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2021-10-26 23:21:07.331 demo-app [main] INFO  org.helper.demo.app.AppApplication - Starting AppApplication using Java 1.8.0_181 on freedom.local with PID 22217 (/Users/zyw/code/github/helper/helper-demo/demo-app/target/classes started by zyw in /Users/zyw/code/github/helper)
+2021-10-26 23:21:07.335 demo-app [main] INFO  org.helper.demo.app.AppApplication - The following profiles are active: dev
+2021-10-26 23:21:09.148 demo-app [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 10010 (http)
+2021-10-26 23:21:09.157 demo-app [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-10010"]
+2021-10-26 23:21:09.157 demo-app [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-10-26 23:21:09.158 demo-app [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-10-26 23:21:09.224 demo-app [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-10-26 23:21:09.224 demo-app [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1724 ms
+2021-10-26 23:21:09.375 demo-app [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2021-10-26 23:21:20.676 demo-app [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2021-10-26 23:21:21.400 demo-app [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-10010"]
+2021-10-26 23:21:21.427 demo-app [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 10010 (http) with context path ''
+2021-10-26 23:21:21.863 demo-app [main] INFO  org.helper.demo.app.AppApplication - Started AppApplication in 15.292 seconds (JVM running for 16.328)
+2021-10-26 23:21:21.867 demo-app [main] INFO  org.helper.demo.app.AppApplication - 
+--------------------------------------------------------
+	Application 'demo-app' is running! Access URLS: 
+	 API DOC: 	http://127.0.0.1:10010/swagger-ui/index.html
+	Local:   	http://localhost:10010
+	External:	http://127.0.0.1:10010
+--------------------------------------------------------
+2021-10-26 23:21:29.655 demo-app [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2021-10-26 23:21:29.674 demo-app [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2021-10-26 23:21:34.171 demo-app [main] INFO  org.helper.demo.app.AppApplication - Starting AppApplication using Java 1.8.0_181 on freedom.local with PID 22227 (/Users/zyw/code/github/helper/helper-demo/demo-app/target/classes started by zyw in /Users/zyw/code/github/helper)
+2021-10-26 23:21:34.175 demo-app [main] INFO  org.helper.demo.app.AppApplication - The following profiles are active: dev
+2021-10-26 23:21:35.780 demo-app [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 10010 (http)
+2021-10-26 23:21:35.787 demo-app [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-10010"]
+2021-10-26 23:21:35.788 demo-app [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-10-26 23:21:35.788 demo-app [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.53]
+2021-10-26 23:21:35.861 demo-app [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-10-26 23:21:35.861 demo-app [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1608 ms
+2021-10-26 23:21:36.001 demo-app [main] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2021-10-26 23:21:48.310 demo-app [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2021-10-26 23:21:49.241 demo-app [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-10010"]
+2021-10-26 23:21:49.269 demo-app [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 10010 (http) with context path ''
+2021-10-26 23:21:49.739 demo-app [main] INFO  org.helper.demo.app.AppApplication - Started AppApplication in 16.444 seconds (JVM running for 17.479)
+2021-10-26 23:21:49.744 demo-app [main] INFO  org.helper.demo.app.AppApplication - 
+--------------------------------------------------------
+	Application 'demo-app' is running! Access URLS: 
+	 API DOC: 	http://127.0.0.1:10010/swagger-ui/index.html
+	Local:   	http://localhost:10010
+	External:	http://127.0.0.1:10010
+--------------------------------------------------------
+2021-10-26 23:22:00.555 demo-app [http-nio-10010-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-10-26 23:22:00.557 demo-app [http-nio-10010-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-10-26 23:22:00.565 demo-app [http-nio-10010-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 6 ms
+2021-10-26 23:23:11.770 demo-app [http-nio-10010-exec-7] WARN  o.s.w.s.m.support.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries
+ at [Source: (PushbackInputStream); line: 4, column: 27]]
+2021-10-26 23:23:14.062 demo-app [http-nio-10010-exec-8] WARN  o.s.w.s.m.support.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries; nested exception is com.fasterxml.jackson.core.JsonParseException: Unexpected character ('"' (code 34)): was expecting comma to separate Object entries
+ at [Source: (PushbackInputStream); line: 4, column: 27]]
+2021-10-26 23:23:44.376 demo-app [http-nio-10010-exec-9] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://47.244.15.208:8001/arrange?useUnicode=true&characterEncoding=UTF-8&useSSL=false&autoReconnect=true&failOverReadOnly=false, version : 1.2.8, lastPacketReceivedIdleMillis : 80117
+2021-10-26 23:23:44.426 demo-app [http-nio-10010-exec-9] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://47.244.15.208:8001/arrange?useUnicode=true&characterEncoding=UTF-8&useSSL=false&autoReconnect=true&failOverReadOnly=false, version : 1.2.8, lastPacketReceivedIdleMillis : 116760
+2021-10-26 23:23:44.468 demo-app [http-nio-10010-exec-9] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://47.244.15.208:8001/arrange?useUnicode=true&characterEncoding=UTF-8&useSSL=false&autoReconnect=true&failOverReadOnly=false, version : 1.2.8, lastPacketReceivedIdleMillis : 117306
+2021-10-26 23:23:44.516 demo-app [http-nio-10010-exec-9] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://47.244.15.208:8001/arrange?useUnicode=true&characterEncoding=UTF-8&useSSL=false&autoReconnect=true&failOverReadOnly=false, version : 1.2.8, lastPacketReceivedIdleMillis : 117846
+2021-10-26 23:23:44.564 demo-app [http-nio-10010-exec-9] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://47.244.15.208:8001/arrange?useUnicode=true&characterEncoding=UTF-8&useSSL=false&autoReconnect=true&failOverReadOnly=false, version : 1.2.8, lastPacketReceivedIdleMillis : 118395
+2021-10-26 23:23:44.610 demo-app [http-nio-10010-exec-9] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://47.244.15.208:8001/arrange?useUnicode=true&characterEncoding=UTF-8&useSSL=false&autoReconnect=true&failOverReadOnly=false, version : 1.2.8, lastPacketReceivedIdleMillis : 118941
+2021-10-26 23:23:44.655 demo-app [http-nio-10010-exec-9] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://47.244.15.208:8001/arrange?useUnicode=true&characterEncoding=UTF-8&useSSL=false&autoReconnect=true&failOverReadOnly=false, version : 1.2.8, lastPacketReceivedIdleMillis : 119469
+2021-10-26 23:23:44.702 demo-app [http-nio-10010-exec-9] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://47.244.15.208:8001/arrange?useUnicode=true&characterEncoding=UTF-8&useSSL=false&autoReconnect=true&failOverReadOnly=false, version : 1.2.8, lastPacketReceivedIdleMillis : 120009
+2021-10-26 23:23:44.747 demo-app [http-nio-10010-exec-9] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://47.244.15.208:8001/arrange?useUnicode=true&characterEncoding=UTF-8&useSSL=false&autoReconnect=true&failOverReadOnly=false, version : 1.2.8, lastPacketReceivedIdleMillis : 120554
+2021-10-26 23:23:44.794 demo-app [http-nio-10010-exec-9] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://47.244.15.208:8001/arrange?useUnicode=true&characterEncoding=UTF-8&useSSL=false&autoReconnect=true&failOverReadOnly=false, version : 1.2.8, lastPacketReceivedIdleMillis : 121083
+2021-10-26 23:23:44.841 demo-app [http-nio-10010-exec-9] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://47.244.15.208:8001/arrange?useUnicode=true&characterEncoding=UTF-8&useSSL=false&autoReconnect=true&failOverReadOnly=false, version : 1.2.8, lastPacketReceivedIdleMillis : 121626
+2021-10-26 23:23:44.884 demo-app [http-nio-10010-exec-9] WARN  com.alibaba.druid.pool.DruidAbstractDataSource - discard long time none received connection. , jdbcUrl : jdbc:mysql://47.244.15.208:8001/arrange?useUnicode=true&characterEncoding=UTF-8&useSSL=false&autoReconnect=true&failOverReadOnly=false, version : 1.2.8, lastPacketReceivedIdleMillis : 123185

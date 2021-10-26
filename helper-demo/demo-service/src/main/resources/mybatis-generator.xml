@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+    <!-- context里面的内容需要按顺序排列，否则可能会报错 -->
+    <context id="db2Tables" targetRuntime="MyBatis3">
+        <!-- 下列property为两个以上的plugin所公用,为了方便配置特别提取出来 -->
+        <!-- 代码作者 -->
+        <property name="author" value="zyw"/>
+
+        <!-- 代码版权信息，默认为: default (https://www.apache.org/licenses/LICENSE-2.0) -->
+        <property name="copyright" value="default"/>
+
+        <!--
+             service controller 生成插件
+             先执行 mvn clean install -DskipTests -pl helper-plugins 打包插件依赖
+        -->
+        <!-- model使用Lombok注解(@Data、@NoArgsConstructor、@AllArgsConstructor) -->
+        <plugin type="org.helper.plugins.mybatis_generator.ModelUseLombokAnnotationPlugin"></plugin>
+
+        <!-- DAO增加文件注释 DO增加文件注释、字段注释 -->
+        <plugin type="org.helper.plugins.mybatis_generator.RemarksCommentPlugin">
+            <!--            &lt;!&ndash; 代码作者 &ndash;&gt;-->
+            <!--            <property name="author" value="zyw"/>-->
+            <!--            &lt;!&ndash; 代码版权信息，默认为: default (https://www.apache.org/licenses/LICENSE-2.0) &ndash;&gt;-->
+            <!--            <property name="copyright" value="default"/>-->
+        </plugin>
+
+        <!-- service controller 及相关的业务自定义类的生成 -->
+        <plugin type="org.helper.plugins.mybatis_generator.ServiceAndControllerPlugin">
+            <!--            &lt;!&ndash; 代码作者 &ndash;&gt;-->
+            <!--            <property name="author" value="zyw"/>-->
+            <!--            &lt;!&ndash; 代码版权信息，默认为: default (https://www.apache.org/licenses/LICENSE-2.0) &ndash;&gt;-->
+            <!--            <property name="copyright" value="default"/>-->
+
+            <!-- 根据自己的电脑系统设置生成模板类的路径（绝对路径）,
+            默认targetProject为:工作目录/mybatis , 如
+            ***/helper-plugin/helper-demo/demo-service/mybatis
+            -->
+            <!-- mac or linux -->
+            <property name="targetProject" value="/Users/zyw/mybatis"/>
+            <!-- windows -->
+            <!--        <property name="targetProject" value="d:/mybatis"/>-->
+
+            <!-- model 后缀名 DO，可以为"" -->
+            <property name="doSuffix" value="DO"/>
+            <!-- 业务层(service)使用的数据对象 后缀名 BO，默认为 BO -->
+            <property name="boSuffix" value="BO"/>
+            <!-- 应用层(appication)请求使用的数据对象 后缀名 ReqDTO，默认为 ReqDTO -->
+            <property name="reqDTOSuffix" value="ReqDTO"/>
+            <!-- 应用层(appication)响应使用的数据对象 后缀名 RespDTO，默认为 RespDTO -->
+            <property name="respDTOSuffix" value="RespDTO"/>
+            <!-- dao 后缀名 DAO，默认为 DAO (默认生成的为Mapper,xml文件保留Mapper结尾，不受影响)-->
+            <property name="daoSuffix" value="DAO"/>
+
+            <!-- 数据库表名前缀(如果有请添加) 如 yb_app_user 前缀 "yb_" 对象名 AppUser -->
+            <property name="tableNamePrefix" value=""/>
+            <!-- service 层 模块包名前缀 -->
+            <property name="serviceModulePrefix" value="org.helper.demo.service.module"/>
+            <!-- application 层 模块包名前缀 如果 service和application在同一个模块中，包名可以一样 -->
+            <property name="appModulePrefix" value="org.helper.demo.app.module"/>
+
+            <!-- service接口的父接口 -->
+            <property name="superServiceInterface" value=""/>
+            <!-- serviceImpl的父类 -->
+            <property name="superServiceImpl" value=""/>
+            <!-- controller的父类接口 -->
+            <property name="superController" value=""/>
+            <!-- 是否生成service层相关代码或数据类 -->
+            <property name="enableService" value="true"/>
+            <!-- 是否生成controller(application 层相关代码或数据类) -->
+            <property name="enableController" value="true"/>
+        </plugin>
+
+        <!-- 禁止合并XmlMapper插件 -->
+        <plugin type="org.mybatis.generator.plugins.UnmergeableXmlMappersPlugin"></plugin>
+
+        <!-- 不生成字段注释，默认注释内容太繁琐，使用 RemarksCommentPlugin 自定义注释格式-->
+        <commentGenerator>
+            <property name="suppressDate" value="true"/>
+            <property name="suppressAllComments" value="true"/>
+            <!-- suppressAllComments false时生效 -->
+            <!--            <property name="addRemarkComments" value="true"/>-->
+        </commentGenerator>
+
+        <!-- 数据库链接地址账号密码 -->
+        <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
+                        connectionURL="jdbc:mysql://zyw:8001/arrange?useSSL=false"
+                        userId="arrange" password="123456">
+        </jdbcConnection>
+
+        <!-- java type -->
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="false"/>
+        </javaTypeResolver>
+
+        <!--
+            生成Model类存放位置
+            配合插件 ServiceAndControllerPlugin 使用
+            targetPackage="targetPackage" 表示使用通过模块划分的targetPackage
+            targetProject="targetProject" 表示使用公共的targetProject配置
+        -->
+        <javaModelGenerator targetPackage="targetPackage"
+                            targetProject="targetProject">
+            <property name="enableSubPackages" value="true"/>
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+
+        <!--
+            生成映射文件存放位置
+            配合插件 ServiceAndControllerPlugin 使用
+            targetPackage="targetPackage" 表示使用通过模块划分的targetPackage
+            targetProject="targetProject" 表示使用公共的targetProject配置
+        -->
+        <sqlMapGenerator targetPackage="targetPackage"
+                         targetProject="targetProject">
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+
+        <!--
+            生成Dao类存放位置
+            配合插件 ServiceAndControllerPlugin 使用
+            targetPackage="targetPackage" 表示使用通过模块划分的targetPackage
+            targetProject="targetProject" 表示使用公共的targetProject配置
+            客户端代码，生成易于使用的针对Model对象和XML配置文件 的代码
+            type="ANNOTATEDMAPPER",生成Java Model 和基于注解的Mapper对象
+            type="MIXEDMAPPER",生成基于注解的Java Model 和相应的Mapper对象
+            type="XMLMAPPER",生成SQLMap XML文件和独立的Mapper接口
+        -->
+        <javaClientGenerator type="XMLMAPPER"
+                             targetPackage="targetPackage"
+                             targetProject="targetProject">
+            <property name="enableSubPackages" value="true"/>
+        </javaClientGenerator>
+
+        <!--
+            数据库表生成定义
+            templateMethod: 自定义要生成的模板方法 addOne,deleteById,updateOne,queryById,list
+                addOne:     单条数据新增(insert)
+                deleteById: 根据id物理删除(deleteByPrimaryKey)
+                updateOne:  单条数据修改(updateByPrimaryKeySelective)
+                queryById:  根据id查询(selectByPrimaryKey)
+                list:       分页条件查询(selectByExample):默认:order by id desc limit 1,12
+            moduleName:     根据业务逻辑 service 层 划分的所属模块，如user_manage
+            appModuleName:  根据业务逻辑 application 层 划分的所属模块，如user_manage
+            domainObjectName、mapperName属性不需要配置
+         -->
+        <table tableName="app_user"
+               enableCountByExample="true" enableUpdateByExample="true"
+               enableDeleteByExample="true" enableSelectByExample="true"
+               selectByExampleQueryId="true">
+            <property name="templateMethod" value="addOne,deleteById,updateOne,queryById,list"/>
+            <property name="serviceModuleName" value="user_manage"/>
+            <property name="appModuleName" value="user_manage"/>
+            <!--<property name="rootClass" value="com.common.base.BaseDO" />-->
+            <!--<generatedKey column="user_id" sqlStatement="SELECT LAST_INSERT_ID()"/>-->
+            <!--<columnOverride column="content" javaType="java.lang.String" jdbcType="VARCHAR" />-->
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+        </table>
+
+        <table tableName="book"
+               enableCountByExample="true" enableUpdateByExample="true"
+               enableDeleteByExample="true" enableSelectByExample="true"
+               selectByExampleQueryId="true">
+            <property name="templateMethod" value="addOne,deleteById,updateOne,queryById,list"/>
+            <property name="serviceModuleName" value="book_manage"/>
+            <property name="appModuleName" value="book_manage"/>
+            <!--<property name="rootClass" value="com.common.base.BaseDO" />-->
+            <!--<generatedKey column="user_id" sqlStatement="SELECT LAST_INSERT_ID()"/>-->
+            <!--<columnOverride column="content" javaType="java.lang.String" jdbcType="VARCHAR" />-->
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+        </table>
+
+    </context>
+</generatorConfiguration>
+
