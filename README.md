@@ -1,7 +1,11 @@
 ## helper-plugins
+![](https://img.shields.io/badge/mybatis--generator--plugin-helper--plugin-green.svg)
 * 基于 https://github.com/mybatis/generator 项目提供的插件扩展功能定义模板代码
 * mybatis generator生成代码统一注解、注释，形成规范
 * ClassPlugin提供对象赋值的自动生成，待完善
+
+## 发布
+* https://github.com/helper2018/helper-plugin/releases
 
 ## 插件介绍
 * mybatis generator 自定义插件
