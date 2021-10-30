@@ -37,7 +37,7 @@ import org.springframework.transaction.annotation.Transactional;
 /**
  * <p>
  * 类名:BookServiceImpl
- * 2021/10/26 23:13
+ * 2021/10/30 22:42
  * <p>
  *
  * @author zyw
@@ -159,37 +159,37 @@ public class BookServiceImpl implements IBookService {
             criteria.andBarCodeEqualTo(bookQueryBO.getBarCode());
         }
         if (StringUtil.hasText(bookQueryBO.getLevelNum())) {
-            criteria.andLevelNumLike(bookQueryBO.getLevelNum());
+            criteria.andLevelNumLike(bookQueryBO.getLevelNum() + "%");
         }
         if (StringUtil.hasText(bookQueryBO.getTitle())) {
-            criteria.andTitleLike(bookQueryBO.getTitle());
+            criteria.andTitleLike(bookQueryBO.getTitle() + "%");
         }
         if (StringUtil.hasText(bookQueryBO.getOriginTitle())) {
-            criteria.andOriginTitleLike(bookQueryBO.getOriginTitle());
+            criteria.andOriginTitleLike(bookQueryBO.getOriginTitle() + "%");
         }
         if (StringUtil.hasText(bookQueryBO.getSubtitle())) {
-            criteria.andSubtitleLike(bookQueryBO.getSubtitle());
+            criteria.andSubtitleLike(bookQueryBO.getSubtitle() + "%");
         }
         if (StringUtil.hasText(bookQueryBO.getAuthor())) {
-            criteria.andAuthorLike(bookQueryBO.getAuthor());
+            criteria.andAuthorLike(bookQueryBO.getAuthor() + "%");
         }
         if (StringUtil.hasText(bookQueryBO.getBinding())) {
-            criteria.andBindingLike(bookQueryBO.getBinding());
+            criteria.andBindingLike(bookQueryBO.getBinding() + "%");
         }
         if (null != bookQueryBO.getPages()) {
             criteria.andPagesEqualTo(bookQueryBO.getPages());
         }
         if (StringUtil.hasText(bookQueryBO.getImagesMedium())) {
-            criteria.andImagesMediumLike(bookQueryBO.getImagesMedium());
+            criteria.andImagesMediumLike(bookQueryBO.getImagesMedium() + "%");
         }
         if (StringUtil.hasText(bookQueryBO.getImagesLarge())) {
-            criteria.andImagesLargeLike(bookQueryBO.getImagesLarge());
+            criteria.andImagesLargeLike(bookQueryBO.getImagesLarge() + "%");
         }
         if (null != bookQueryBO.getPubdate()) {
             criteria.andPubdateEqualTo(bookQueryBO.getPubdate());
         }
         if (StringUtil.hasText(bookQueryBO.getPublisher())) {
-            criteria.andPublisherLike(bookQueryBO.getPublisher());
+            criteria.andPublisherLike(bookQueryBO.getPublisher() + "%");
         }
         if (null != bookQueryBO.getIsbn10()) {
             criteria.andIsbn10EqualTo(bookQueryBO.getIsbn10());
@@ -198,7 +198,7 @@ public class BookServiceImpl implements IBookService {
             criteria.andIsbn13EqualTo(bookQueryBO.getIsbn13());
         }
         if (StringUtil.hasText(bookQueryBO.getSummary())) {
-            criteria.andSummaryLike(bookQueryBO.getSummary());
+            criteria.andSummaryLike(bookQueryBO.getSummary() + "%");
         }
         if (null != bookQueryBO.getPrice()) {
             criteria.andPriceEqualTo(bookQueryBO.getPrice());

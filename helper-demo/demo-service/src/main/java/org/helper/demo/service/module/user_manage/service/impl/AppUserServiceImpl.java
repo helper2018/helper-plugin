@@ -37,7 +37,7 @@ import org.springframework.transaction.annotation.Transactional;
 /**
  * <p>
  * 类名:AppUserServiceImpl
- * 2021/10/26 23:13
+ * 2021/10/30 22:42
  * <p>
  *
  * @author zyw
@@ -153,16 +153,16 @@ public class AppUserServiceImpl implements IAppUserService {
             criteria.andStatusEqualTo(appUserQueryBO.getStatus());
         }
         if (StringUtil.hasText(appUserQueryBO.getName())) {
-            criteria.andNameLike(appUserQueryBO.getName());
+            criteria.andNameLike(appUserQueryBO.getName() + "%");
         }
         if (null != appUserQueryBO.getMobile()) {
             criteria.andMobileEqualTo(appUserQueryBO.getMobile());
         }
         if (StringUtil.hasText(appUserQueryBO.getEmail())) {
-            criteria.andEmailLike(appUserQueryBO.getEmail());
+            criteria.andEmailLike(appUserQueryBO.getEmail() + "%");
         }
         if (StringUtil.hasText(appUserQueryBO.getToken())) {
-            criteria.andTokenLike(appUserQueryBO.getToken());
+            criteria.andTokenLike(appUserQueryBO.getToken() + "%");
         }
         
         long dataCount = appUserDAO.countByExample(appUserExample);

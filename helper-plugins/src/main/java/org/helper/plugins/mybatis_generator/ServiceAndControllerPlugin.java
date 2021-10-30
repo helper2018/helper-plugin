@@ -1233,10 +1233,11 @@ public class ServiceAndControllerPlugin extends PluginAdapter {
                         listMethod.addBodyLine(String.format("if (StringUtil.hasText(%s.%s())) {",
                                 StringUtil.firstCharToLowCase(boQueryName),
                                 JavaBeansUtil.getGetterMethodName(fieldName, field.getType())));
-                        listMethod.addBodyLine(String.format("criteria.and%sLike(%s.%s());",
+                        listMethod.addBodyLine(String.format("criteria.and%sLike(%s.%s()%s);",
                                 StringUtil.firstCharToUpperCase(fieldName),
                                 StringUtil.firstCharToLowCase(boQueryName),
-                                JavaBeansUtil.getGetterMethodName(fieldName, field.getType())
+                                JavaBeansUtil.getGetterMethodName(fieldName, field.getType()),
+                                " + \"%\""
                         ));
                         listMethod.addBodyLine("}");
                     } else if ("Date".equals(javaType)) {
